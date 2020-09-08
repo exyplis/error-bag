@@ -1,6 +1,6 @@
 {
   "name": "@exyplis/error-bag",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple error bag to handle validation errors on front-end",
   "main": "src/ErrorBag.js",
   "repository": {
