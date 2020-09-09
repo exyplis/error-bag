@@ -12,7 +12,7 @@ class ErrorBag {
      * @param {string} field
      */
     has(field) {
-        return this.errors.hasOwnProperty(field);
+        return Object.hasOwnProperty.call(this.errors, field);
     }
 
     /**
@@ -48,7 +48,7 @@ class ErrorBag {
      */
     capture(response) {
         this.message = response.data.message || response.statusText;
-        if (response.data.hasOwnProperty('errors')) {
+        if (Object.hasOwnProperty.call(response.data, 'errors')) {
             this.record(response.data.errors);
         }
     }
